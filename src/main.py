@@ -37,9 +37,12 @@ def play():
         print("Please choose a valid weapon.")
         p_choice = input("Choose your weapon: ")
     # This prints the player's choice
-    print_statement("You chose " + full_options[options.index(p_choice)], 1)
+    print_statement(f"You chose {full_options[options.index(p_choice)]}", 1)
     # This prints the computer's choice
-    print_statement("The computer chose " + full_options[options.index(c_choice)], 1)
+    print_statement(
+        f"The computer chose {full_options[options.index(c_choice)]}", 1
+    )
+
     # This checks if the player's choice beats the computer's choice
     if verify_choice(p_choice, c_choice):
         # This prints if the player wins
